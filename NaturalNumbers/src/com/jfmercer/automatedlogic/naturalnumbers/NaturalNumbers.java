@@ -9,6 +9,7 @@ package com.jfmercer.automatedlogic.naturalnumbers;
 public class NaturalNumbers
 {
    /**
+    * Sums all natural numbers less
     *
     * @param x
     * @return
@@ -20,7 +21,7 @@ public class NaturalNumbers
          x = 0;
       }
 
-      for(int i = 0; i <= x; i++) {
+      for(int i = 0; i < x; i++) {
          if (i % 3 == 0 || i % 5 == 0) {
             total += i;
          }
