@@ -1,0 +1,25 @@
+For the purpose of these tasks, please include any assumptions you make as comments
+within the code.  While unit testing is not required, including your unit tests will be
+viewed favorably.  Please include a text file with your submission detailing any
+libraries/compilers/etc required to run your code.
+
+Problem #1
+
+If we list all the natural numbers less than 10 which are multiples of 3 or 5,
+we get 3, 5, 6, 9.  The sum of these multiples is 23.  Write a function which returns
+the sum of all multiples of 3 or 5 less than X, where X is an integer parameter.
+
+
+Problem #2
+
+Write a FUNCTION which takes in a String as a parameter and returns a Pig Latin version
+of that string.  The program should be able to :
+1)      handle punctuation
+2)      Ignore numbers (i.e. if “500” is passed in, “500” is passed back)
+3)      Handle multiple sentences
+
+Pig Latin translation is simply taking the first letter of a “word” and appending that
+letter to the end of the word with “ay” added to the end as well.  Example:
+
+“Alex, how did you do question 21?”  should translate to “lexAy, owhay idday ouyay oday
+uestionqay 21?”
