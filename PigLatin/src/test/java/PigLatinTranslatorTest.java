@@ -167,18 +167,18 @@ public class PigLatinTranslatorTest
    }
 
 
-//   @Test
-//   public void anythingGoesTest() {
-//      String a = "The quick brown fox jumps over the lazy dog.";
-//      String b = "The quick brown fox jumps over the lazy dog.";
-//      String c = "The quick brown fox jumps over the lazy dog.";
-//      String d = "The quick brown fox jumps over the lazy dog.";
-//      String e = "The quick brown fox jumps over the lazy dog.";
-//
-//      assertEquals(PigLatin.translator(a), "");
-//      assertEquals(PigLatin.translator(b), "");
-//      assertEquals(PigLatin.translator(c), "");
-//      assertEquals(PigLatin.translator(d), "");
-//      assertEquals(PigLatin.translator(e), "");
-//   }
+   @Test
+   public void letterLessWordTest() {
+      String a = "The ????? brown fox jumps over the lazy dog.";
+      String b = "The quick brown @@@ jumps over the lazy dog.";
+      String c = "The quick 2#%() fox jumps over the lazy dog.";
+      String d = "The quick brown fox jumps 2#$5 the lazy dog.";
+      String e = "The quick brown fox jumps over the **24() dog.";
+
+      assertEquals(PigLatin.translator(a), "heTay ????? rownbay oxfay umpsjay veroay hetay azylay ogday.");
+      assertEquals(PigLatin.translator(b), "heTay uickqay rownbay @@@ umpsjay veroay hetay azylay ogday.");
+      assertEquals(PigLatin.translator(c), "heTay uickqay 2#%() oxfay umpsjay veroay hetay azylay ogday.");
+      assertEquals(PigLatin.translator(d), "heTay uickqay rownbay oxfay umpsjay 2#$5 hetay azylay ogday.");
+      assertEquals(PigLatin.translator(e), "heTay uickqay rownbay oxfay umpsjay veroay hetay **24() ogday.");
+   }
 }

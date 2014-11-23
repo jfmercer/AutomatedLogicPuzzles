@@ -15,7 +15,7 @@ public class PigLatinDriver {
       String c = "The qui43ck brown fox jumps over the la89zy dog.";
       String d = "The quick brown fox jumps over the lazy dog.";
       String e = "T9he quick br7own fox jumps o5ver the la3zy do6g.";
-      String f = "???????";
+      String f = "??? ???";
 
 
       System.out.print(a + " SHOULD BE " + PigLatin.translator(null) + "\n");
