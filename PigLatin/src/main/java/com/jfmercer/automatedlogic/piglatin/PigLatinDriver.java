@@ -16,9 +16,9 @@ public class PigLatinDriver {
       String d = "The big !@#brown dog jumps the 55high fence";
 
       System.out.print(a + PigLatin.translator(a) + "\n");
-      System.out.print(b + PigLatin.translator(b) + "\n");
-      System.out.print(c + PigLatin.translator(c) + "\n");
-      System.out.print(d + PigLatin.translator(d) + "\n");
+//      System.out.print(b + PigLatin.translator(b) + "\n");
+//      System.out.print(c + PigLatin.translator(c) + "\n");
+//      System.out.print(d + PigLatin.translator(d) + "\n");
 //      System.out.print(c + PigLatin.translator(c) + "\n");
 //      System.out.print(c + PigLatin.translator(c) + "\n");
 //      System.out.print(c + PigLatin.translator(c) + "\n");
