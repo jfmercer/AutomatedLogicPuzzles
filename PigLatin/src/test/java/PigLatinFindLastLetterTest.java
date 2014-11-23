@@ -12,13 +12,13 @@ import java.lang.reflect.*;
  * @version: 1.0
  */
 
-public class PigLatinFindFirstLetterTest {
+public class PigLatinFindLastLetterTest {
    PigLatin pl = new PigLatin();
    Method method;
 
-   public PigLatinFindFirstLetterTest() {
+   public PigLatinFindLastLetterTest() {
       try {
-         this.method = PigLatin.class.getDeclaredMethod("findFirstLetter", char[].class);
+         this.method = PigLatin.class.getDeclaredMethod("findLastLetter", char[].class);
          this.method.setAccessible(true);
       } catch (NoSuchMethodException ex) {
          ex.printStackTrace();
@@ -36,11 +36,11 @@ public class PigLatinFindFirstLetterTest {
 
 
       try {
-         assertEquals(0, method.invoke(pl, a));
-         assertEquals(0, method.invoke(pl, b));
-         assertEquals(0, method.invoke(pl, c));
-         assertEquals(0, method.invoke(pl, d));
-         assertEquals(0, method.invoke(pl, e));
+         assertEquals(4, method.invoke(pl, a));
+         assertEquals(5, method.invoke(pl, b));
+         assertEquals(6, method.invoke(pl, c));
+         assertEquals(7, method.invoke(pl, d));
+         assertEquals(2, method.invoke(pl, e));
       }
       catch (IllegalAccessException ex) {
          ex.printStackTrace();
@@ -53,19 +53,19 @@ public class PigLatinFindFirstLetterTest {
    @Test
    public void strangeWordsTest() {
 
-      char[] a = "@#$apple".toCharArray();
-      char[] b = "2()4butter".toCharArray();
-      char[] c = "@cracker".toCharArray();
-      char[] d = "9(dumpling".toCharArray();
-      char[] e = "&7%9(5)egg".toCharArray();
+      char[] a = "apple@#$".toCharArray();
+      char[] b = "butter2()4".toCharArray();
+      char[] c = "cracker@".toCharArray();
+      char[] d = "dumpling2()4".toCharArray();
+      char[] e = "egg&7%9(5)".toCharArray();
 
 
       try {
-         assertEquals(3, method.invoke(pl, a));
-         assertEquals(4, method.invoke(pl, b));
-         assertEquals(1, method.invoke(pl, c));
-         assertEquals(2, method.invoke(pl, d));
-         assertEquals(7, method.invoke(pl, e));
+         assertEquals(4, method.invoke(pl, a));
+         assertEquals(5, method.invoke(pl, b));
+         assertEquals(6, method.invoke(pl, c));
+         assertEquals(7, method.invoke(pl, d));
+         assertEquals(2, method.invoke(pl, e));
       }
       catch (IllegalAccessException ex) {
          ex.printStackTrace();
