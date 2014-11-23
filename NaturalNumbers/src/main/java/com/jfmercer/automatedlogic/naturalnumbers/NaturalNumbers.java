@@ -4,7 +4,7 @@ package com.jfmercer.automatedlogic.naturalnumbers;
  * Description: AutomatedLogicPuzzles
  *
  * @author: John Mercer
- * @version: AutomatedLogicPuzzles
+ * @version: 1.0
  */
 public final class NaturalNumbers
 {
