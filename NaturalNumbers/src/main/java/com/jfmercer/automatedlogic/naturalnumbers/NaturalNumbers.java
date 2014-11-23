@@ -14,7 +14,7 @@ public class NaturalNumbers
     *
     * @param x
     */
-   public static void calculateNumberTotal(int x) {
+   public static int calculateNumberTotal(int x) {
       int total = 0;
 
       if(x < 0) {
@@ -30,6 +30,8 @@ public class NaturalNumbers
       }
 
       printResults(x, total);
+
+      return total;
    }
 
    /**
