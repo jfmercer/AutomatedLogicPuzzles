@@ -18,7 +18,9 @@ Assumptions
 For Natural Numbers, I have assumed that the user will
 enter a signed integer within the valid integer range. If not, 
 the program simply crashes. If a negative integer is entered,
-it is muliplied by -1 to make it a natural number. Finally, 
+it is muliplied by -1 to make it a natural number. If a char is
+entered, I have not treated that as invalid input, but rather 
+allowed Java to translate it to its ASCII numerical value. Finally, 
 I have included 0 in the set of natural numbers, even though
 mathematicians are still undecided on this point. 
 
