@@ -50,7 +50,6 @@ public class NaturalNumbersTest {
       assertSame(e, b);
 
       b = null;
-
       assertNull(b);
    }
 
