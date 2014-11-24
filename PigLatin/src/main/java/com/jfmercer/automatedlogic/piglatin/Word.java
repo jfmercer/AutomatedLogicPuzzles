@@ -1,38 +1,52 @@
 package com.jfmercer.automatedlogic.piglatin;
 
-import java.io.Serializable;
-
 /**
  * Description: PigLatin
  *
  * @author: John Mercer
  * @version: 1.0
  */
-public class Word implements Serializable {
+public class Word {
 
    private String word;
 
+   /**
+    * Turns a string into a Word object
+    * @param word
+    */
    public Word(String word) {
       this.word = word;
    }
 
+   /**
+    *
+    * @return this instance of Word
+    */
    public Word getWord() {
       return this;
    }
 
+   /**
+    * sets Word with new string
+    * @param word
+    */
    public void setWord(String word) {
       this.word = word;
    }
 
+   /**
+    *
+    * @return this Word object as a string
+    */
    @Override
    public String toString() {
       return this.word;
    }
 
-   public int length() {
-      return this.word.length();
-   }
-
+   /**
+    * Translated Word into PigLatin
+    * @return Word in PigLatin
+    */
    public Word toPigLatin() {
 
       String input = word.toString();

@@ -6,7 +6,7 @@ import java.lang.reflect.*;
 /**
  * Description: PigLatin
  *
- * This is a JUnit test for the PigLatin findFirstLetter method.
+ * This is a JUnit test for the Word findFirstLetter method.
  *
  * @author: John Mercer
  * @version: 1.0
