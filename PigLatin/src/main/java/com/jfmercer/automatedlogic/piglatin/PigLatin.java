@@ -33,11 +33,12 @@ public final class PigLatin {
          wordList.add(new Word (word));
       }
 
-      for(int i = 0; i < wordList.size() - 1; i++) {
+      for(int i = 0; i < wordList.size(); i++) {
          builder.append(wordList.get(i).toPigLatin().toString());
          builder.append(' ');
       }
 
+      // remove trailing whitespace
       builder.deleteCharAt(builder.toString().length() - 1);
 
       return builder.toString();

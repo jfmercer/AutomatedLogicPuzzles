@@ -13,12 +13,12 @@ import java.lang.reflect.*;
  */
 
 public class PigLatinFindFirstLetterTest {
-   PigLatin pl = new PigLatin();
+   Word word = new Word("word");
    Method method;
 
    public PigLatinFindFirstLetterTest() {
       try {
-         this.method = PigLatin.class.getDeclaredMethod("findFirstLetter", char[].class);
+         this.method = Word.class.getDeclaredMethod("findFirstLetter", char[].class);
          this.method.setAccessible(true);
       } catch (NoSuchMethodException ex) {
          ex.printStackTrace();
@@ -36,11 +36,11 @@ public class PigLatinFindFirstLetterTest {
 
 
       try {
-         assertEquals(0, method.invoke(pl, a));
-         assertEquals(0, method.invoke(pl, b));
-         assertEquals(0, method.invoke(pl, c));
-         assertEquals(0, method.invoke(pl, d));
-         assertEquals(0, method.invoke(pl, e));
+         assertEquals(0, method.invoke(word, a));
+         assertEquals(0, method.invoke(word, b));
+         assertEquals(0, method.invoke(word, c));
+         assertEquals(0, method.invoke(word, d));
+         assertEquals(0, method.invoke(word, e));
       }
       catch (IllegalAccessException ex) {
          ex.printStackTrace();
@@ -61,11 +61,11 @@ public class PigLatinFindFirstLetterTest {
 
 
       try {
-         assertEquals(3, method.invoke(pl, a));
-         assertEquals(4, method.invoke(pl, b));
-         assertEquals(1, method.invoke(pl, c));
-         assertEquals(2, method.invoke(pl, d));
-         assertEquals(7, method.invoke(pl, e));
+         assertEquals(3, method.invoke(word, a));
+         assertEquals(4, method.invoke(word, b));
+         assertEquals(1, method.invoke(word, c));
+         assertEquals(2, method.invoke(word, d));
+         assertEquals(7, method.invoke(word, e));
       }
       catch (IllegalAccessException ex) {
          ex.printStackTrace();
@@ -86,11 +86,11 @@ public class PigLatinFindFirstLetterTest {
 
 
       try {
-         assertEquals(-1, method.invoke(pl, a));
-         assertEquals(-1, method.invoke(pl, b));
-         assertEquals(-1, method.invoke(pl, c));
-         assertEquals(-1, method.invoke(pl, d));
-         assertEquals(-1, method.invoke(pl, e));
+         assertEquals(-1, method.invoke(word, a));
+         assertEquals(-1, method.invoke(word, b));
+         assertEquals(-1, method.invoke(word, c));
+         assertEquals(-1, method.invoke(word, d));
+         assertEquals(-1, method.invoke(word, e));
       }
       catch (IllegalAccessException ex) {
          ex.printStackTrace();
