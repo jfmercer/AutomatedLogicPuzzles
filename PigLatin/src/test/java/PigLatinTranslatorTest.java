@@ -181,4 +181,26 @@ public class PigLatinTranslatorTest
       assertEquals(PigLatin.translator(d), "heTay uickqay rownbay oxfay umpsjay 2#$5 hetay azylay ogday.");
       assertEquals(PigLatin.translator(e), "heTay uickqay rownbay oxfay umpsjay veroay hetay **24() ogday.");
    }
+
+   @Test
+   public void whiteSpaceTest() {
+      String a = "dog    cat";
+      String b = "   dog   cat";
+      String c = "dog     cat   ";
+      String d = "dog  cat";
+      String e = "   dog      cat   ";
+
+      assertEquals(PigLatin.translator(a), "ogday    atcay");
+      assertEquals(PigLatin.translator(b), "   ogday   atcay");
+      assertEquals(PigLatin.translator(c), "ogday     atcay");
+      assertEquals(PigLatin.translator(d), "ogday  atcay");
+      assertEquals(PigLatin.translator(e), "   ogday      atcay");
+   }
+
+   @Test
+   public void emptyStringTest() {
+      String a = "";
+
+      assertEquals(PigLatin.translator(a), "");
+   }
 }
